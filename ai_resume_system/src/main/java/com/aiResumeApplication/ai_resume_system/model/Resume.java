@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 @Entity
 public class Resume {
 
+    @Column(length = 1000)
+    private String skills;
+
 
     @Column(columnDefinition = "LONGTEXT")
     private String extractedText;
@@ -60,4 +63,13 @@ public class Resume {
     public void setExtractedText(String extractedText) {
         this.extractedText = extractedText;
     }
+    public String getSkills() {
+        return skills;
+    }
+
+    public void setSkills(String skills) {
+        this.skills = skills;
+    }
 }
+
+
